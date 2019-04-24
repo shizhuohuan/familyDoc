@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.FdHistoryDao">
+  
+	<select id="getBySendId" parameterType="String" resultType="FdHistory">
+		select * from fdhistory where sendId = #{0} and type = #{1} and confirm = #{2}
+	</select>
+
+	<select id="getByReciveId" parameterType="String" resultType="FdHistory">
+		select * from fdhistory where reciveId = #{0} and type = #{1} and confirm = #{2}
+	</select>
+
+	<select id="getBySendIdWithoutType" parameterType="String" resultType="FdHistory">
+		select * from fdhistory where reciveId = #{0} and confirm = #{1}
+	</select>
+
+	<select id="getChatHistory" parameterType="String" resultType="FdHistory">
+		select * from fdhistory where sendId = #{0} and reciveId = #{1} and type = 0 and confirm = #{2} order by createDate
+	</select>
+
+	<insert id="add" parameterType="FdHistory">
+		insert into fdhistory values (#{id},#{content},#{createDate},#{sendId},#{reciveId},#{confirm},#{type},#{messageId})
+	</insert>
+
+	<update id="confirm" parameterType="String">
+		update fdhistory set confirm = 1 where messageId = #{0}
+	</update>
+
+
+	<!--<delete id="delete" parameterType="String">
+		delete from t_order where code = #{code}
+	</delete>
+
+	<update id="update" parameterType="torder">
+		update t_order set price = #{price},address = #{address} where code = #{code}
+	</update>
+-->
+	
+</mapper>

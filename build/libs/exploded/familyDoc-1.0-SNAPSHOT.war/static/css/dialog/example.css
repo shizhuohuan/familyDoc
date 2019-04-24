@@ -1,0 +1,158 @@
+.center-container {
+  max-width: 700px;
+  margin: 70px auto; }
+
+pre {
+  background-color: #49483e;
+  color: #f8f8f2;
+  padding: 10px;
+  border-radius: 5px;
+  white-space: pre-line;
+  text-align: left;
+  font-size: 14px;
+  max-width: 600px; }
+  pre .str {
+    color: #e6db74; }
+  pre .func {
+    color: #66d9ef; }
+  pre .val {
+    color: #a381ff; }
+  pre .tag {
+    color: #e92772; }
+  pre .attr {
+    color: #a6e22d; }
+
+.showcase {
+  background-color: #eceef0;
+  padding: 20px;
+  display: inline-block;
+  width: 383px;
+  vertical-align: top;
+  position: relative; }
+  @media all and (max-width: 865px) {
+    .showcase {
+      margin: 5px auto;
+      padding: 46px 20px; } }
+  @media all and (max-width: 440px) {
+    .showcase {
+      width: auto; } }
+  .showcase h4 {
+    font-size: 16px;
+    color: #BCBCBC;
+    line-height: 22px;
+    margin: 0 auto;
+    font-weight: 400; }
+  .showcase.sweet h4 {
+    width: 117px;
+    height: 25px;
+    margin-top: -3px;
+    text-indent: -9999px;
+    background-image: url("../../images/dialog/logo_small.png");
+    background-image: -webkit-image-set(url("../../images/dialog/logo_small.png") 1x, url("../../images/dialog/logo_small@2x.png") 2x); }
+  .showcase h5 {
+    margin-bottom: -7px;
+    text-align: left;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #c2c2c2; }
+  .showcase button {
+    margin-bottom: 10px; }
+  .showcase .vs-icon {
+    background-image: url("../../images/dialog/vs_icon.png");
+    background-image: -webkit-image-set(url("../../images/dialog/vs_icon.png") 1x, url("../../images/dialog/vs_icon@2x.png") 2x);
+    width: 69px;
+    height: 69px;
+    position: absolute;
+    right: -34px;
+    top: 60px;
+    z-index: 2; }
+    @media all and (max-width: 865px) {
+      .showcase .vs-icon {
+        margin: 5px auto;
+        right: auto;
+        left: 50%;
+        margin-left: -35px;
+        top: auto;
+        bottom: -35px; } }
+
+ol {
+  max-width: 700px;
+  margin: 70px auto;
+  list-style-position: inside;
+  padding-left: 0; }
+  ol li {
+    color: #A7ADB2; }
+    ol li p {
+      margin-bottom: 10px; }
+
+table {
+  width: 700px;
+  font-size: 14px;
+  color: #8a8f94;
+  margin: 10px auto;
+  text-align: left;
+  border-collapse: collapse; }
+  @media all and (max-width: 750px) {
+    table {
+      width: auto;
+      margin: 10px 20px; } }
+  table th {
+    background-color: white;
+    padding: 9px;
+    color: #acb9be;
+    font-weight: 400;
+    text-align: center;
+    position: relative; }
+    table th .border-left, table th .border-right {
+      position: absolute;
+      background-color: white;
+      border-radius: 50%;
+      top: 0;
+      left: -17px;
+      width: 37px;
+      height: 37px; }
+    table th .border-right {
+      left: auto;
+      right: -17px; }
+    @media all and (max-width: 750px) {
+      table th:nth-child(2) {
+        display: none; } }
+  table td {
+    padding: 10px 20px;
+    vertical-align: top; }
+    table td:first-child {
+      padding-left: 0px; }
+    table td:last-child {
+      padding-right: 0px; }
+    @media all and (max-width: 750px) {
+      table td:nth-child(2) {
+        display: none; } }
+    @media all and (max-width: 360px) {
+      table td {
+        padding: 10px 4px; }
+        table td b {
+          font-size: 13px; } }
+
+footer {
+  margin-top: 100px;
+  padding-bottom: 30px;
+  color: #9A999F;
+  display: inline-block;
+  position: relative;
+  color: gray;
+  font-weight: 400;
+  color: #93a1aa;
+  font-weight: 300; }
+  footer .te-logo {
+    text-indent: -99999px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+    margin-right: 5px;
+    background-image: url("../../images/dialog/te-logo-small.svg");
+    position: absolute;
+    left: -22px;
+    top: 3px; }

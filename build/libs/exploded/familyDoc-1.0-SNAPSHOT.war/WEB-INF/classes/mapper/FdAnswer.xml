@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.FdAnswerDao">
+  
+	<select id="getById" parameterType="String" resultType="FdAnswer">
+		select *
+		from FdAnswer where id = #{0}
+	</select>
+
+	<select id="getByQsId" resultType="FdAnswer">
+		select * from FdAnswer where quessionId = #{0}
+	</select>
+
+	<select id="getByUserId" resultType="FdAnswer">
+		select * from FdAnswer where userId = #{0}
+	</select>
+
+	<insert id="add" parameterType="FdAnswer">
+		insert into FdAnswer values (#{id},#{quessionId},#{content},#{createTime},#{userId})
+	</insert>
+
+	<delete id="delete" parameterType="String">
+		delete from FdAnswer where id = #{0}
+	</delete>
+
+	<!--<delete id="delete" parameterType="String">
+		delete from t_order where code = #{code}
+	</delete>
+
+	<update id="update" parameterType="torder">
+		update t_order set price = #{price},address = #{address} where code = #{code}
+	</update>
+-->
+	
+</mapper>

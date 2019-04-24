@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.FdDepartmentDao">
+  
+	<select id="getById" parameterType="String" resultType="FdDepartment">
+		select
+			id, dpName, produce, type
+		from FdDepartment where id = #{0}
+	</select>
+
+	<select id="getAll" resultType="FdDepartment">
+		select
+			id, dpName, produce, type
+		from FdDepartment
+	</select>
+
+	<select id="getByType" parameterType="Integer" resultType="FdDepartment">
+		select
+			id, dpName, produce, type
+		from FdDepartment where type = #{0}
+	</select>
+
+	<!--<delete id="delete" parameterType="String">
+		delete from t_order where code = #{code}
+	</delete>
+
+	<update id="update" parameterType="torder">
+		update t_order set price = #{price},address = #{address} where code = #{code}
+	</update>
+-->
+	
+</mapper>

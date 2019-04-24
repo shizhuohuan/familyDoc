@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.FdRecordDao">
+  
+	<select id="getById" parameterType="String" resultType="FdRecord">
+		select * from fdrecord where id = #{0}
+	</select>
+	<select id="getAll" parameterType="String" resultType="FdRecord">
+		select * from fdrecord
+	</select>
+
+	<insert id="add" parameterType="FdRecord">
+		insert into fdrecord values (#{id},#{createTime},#{deptId},#{currentIll},#{diagnose},#{docAdvice},#{remark},#{talk},#{docId},#{userId})
+	</insert>
+
+	<update id="update" parameterType="FdRecord">
+		update fdrecord set userId=#{userId}, talk=#{talk}, docId=#{docId}, deptId=#{deptId}, currentIll = #{currentIll},diagnose = #{diagnose},docAdvice=#{docAdvice} ,remark=#{remark} where id = #{id}
+	</update>
+	<!--<delete id="delete" parameterType="String">
+		delete from t_order where code = #{code}
+	</delete>
+
+	<update id="update" parameterType="torder">
+		update t_order set price = #{price},address = #{address} where code = #{code}
+	</update>
+-->
+	
+</mapper>

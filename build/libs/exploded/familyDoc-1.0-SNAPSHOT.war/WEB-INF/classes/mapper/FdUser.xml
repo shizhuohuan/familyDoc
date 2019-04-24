@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.FdUserDao">
+  
+	<select id="getById" parameterType="String" resultType="FdUser">
+		select * from fduser where id = #{0}
+	</select>
+
+	<select id="getByUserName" parameterType="String" resultType="FdUser">
+		select * from fduser where userName = #{0}
+	</select>
+
+	<select id="getAll" parameterType="String" resultType="FdUser">
+		select * from fduser
+	</select>
+
+	<select id="getByIdentity" parameterType="String" resultType="FdUser">
+		select * from fduser where identity = #{0};
+	</select>
+
+	<insert id="add" parameterType="FdUser">
+		insert into fduser values (#{id},#{userName},#{password},#{identity})
+	</insert>
+
+	<update id="update" parameterType="FdUser">
+		update fduser set userName = #{userName},password = #{password},identity=#{identity} where id = #{id}
+	</update>
+
+	<!--<delete id="delete" parameterType="String">
+		delete from t_order where code = #{code}
+	</delete>
+
+	<update id="update" parameterType="torder">
+		update t_order set price = #{price},address = #{address} where code = #{code}
+	</update>
+-->
+	
+</mapper>
